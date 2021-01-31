@@ -1,1 +1,1 @@
-dembovskaya polina - #1 test pull-request
+dembovskaya - #1 test pull-request
