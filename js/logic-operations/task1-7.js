@@ -25,15 +25,12 @@
 
 // Объявите переменную a. Если значение переменной равно 0, выведите в консоль true, иначе false.
 // Проверьте, что будет появляться в консоли для значений 1, 0, -3.
+
 (function() {
 
-    let a = 1;
+    let a = 0;
 
-    if (a == 0) {
-        console.log(true);
-    } else {
-        console.log(false);
-    }
+    console.log(!a);
 
 })();
 
@@ -80,7 +77,7 @@
 // }
 (function() {
 
-    let result = (a + b < 4) ? 'Мало' : 'Много';
+    let result = a + b < 4 ? 'Мало' : 'Много';
 
 })(); 
 
@@ -101,10 +98,11 @@
 
     let login = 'Вася';
 
-    let message = (login == 'Вася') ? 'Привет':
-        (login == 'Директор') ? 'Здравствуйте':
-            (login == '') ? 'Нет логина':
-                '';
+    let message = 
+        (login == 'Вася') ? 'Привет':
+            (login == 'Директор') ? 'Здравствуйте':
+                (login == '') ? 'Нет логина':
+                    '';
 
     console.log(message);
 
@@ -125,11 +123,13 @@
     let surname = prompt('Фамилия');
     let patronymic = prompt('Отчество');
     let age = prompt('Возраст');
+    let ageDays = +age * 365;
+    let ageAfter5 = +age + 5;
     let retired;
 
     let gender = confirm('Ваш пол - мужской?');
 
-    if (gender === true) {
+    if (gender) {
     gender = 'Мужской';
     } else {
     gender = 'Женский';
@@ -141,10 +141,14 @@
     retired = 'Нет';
     }
 
+    // (gender) ? 'Мужской' : 'Женский'
+    
+    // let retired = age > 60 ? 'Да' : 'Нет'
+
     alert(`Ваше ФИО: ${name} ${surname} ${patronymic}
         Ваш возраст в годах: ${age}
-        Ваш возраст в днях: ${age * 365}
-        Через 5 лет вам будет: ${+age + 5}
+        Ваш возраст в днях: ${ageDays}
+        Через 5 лет вам будет: ${ageAfter5}
         Ваш пол: ${gender}
         Вы на пенсии: ${retired}`);
 
