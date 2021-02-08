@@ -5,9 +5,10 @@
 let a = 10;
 let b = 2;
 let result = a % b;
+let result2 = a / b;
 
 if (result === 0) {
-    console.log('Делится');
+    console.log('Делится, ответ - ' + `${result2}`);
 } else {
     console.log('Делится с остатком ' + `${result}`);
 }
