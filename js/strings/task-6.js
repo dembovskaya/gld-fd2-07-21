@@ -4,10 +4,13 @@
 const str = 'Hello world';
 let substr = 'l';
 
-console.log(str.includes(substr));
+function test(str, substr) {
+    if (str.includes(substr)) {
+        const index = str.indexOf(substr);
+        return str.includes(substr, index + substr.length);
+    } 
 
-if (substr >= 2) {
-    console.log(true);
-} else {
-    console.log(false);
+    return false;
 }
+
+console.log(test(str, substr));

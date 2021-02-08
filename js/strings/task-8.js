@@ -4,5 +4,6 @@
 
 const a = 10;
 const b = 2;
+const c = a * b;
 
-console.log(`${a} times ${b} is ${a * b}`);
+console.log(`${a} times ${b} is ${c}`);

@@ -4,8 +4,4 @@
 
 let str = 'low take that, prICE';
 
-if (str.includes('discount') || str.includes('low price')) {
-    console.log(true);
-} else {
-    console.log(false);
-}
+console.log(str.includes('discount') || str.includes('low price'));

@@ -7,4 +7,8 @@ const hour = 4;
 const minute = 35;
 const second = 5;
 
-console.log( `${'0' + hour}${('' + minute).padStart(3, ':')}${('0' + second).padStart(3, ':')}` );
+const hourP = ('' + hour).padStart(2, '0');
+const minuteP = ('' + minute).padStart(3, ':');
+const secP = (('' + second).padStart(2, '0')).padStart(3, ':');
+
+console.log( `${hourP}${minuteP}${secP}` );
