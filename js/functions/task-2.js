@@ -7,4 +7,4 @@ function currency(stringArr, num) {
     return stringArr[0] + '$' + num.toFixed(2);
 }
 
-console.log(currency `It costs ${num}`);
+currency `It costs ${num}`;

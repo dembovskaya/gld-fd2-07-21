@@ -8,4 +8,4 @@ const body = 'return a + b';
 
 const constr = new Function(params, body);
 
-console.log(constr(90, 10));
+constr(90, 10);
