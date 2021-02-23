@@ -9,3 +9,9 @@ arr.sort(function compare(a, b) {
 });
 
 console.log(arr);
+
+const arr2 = arr.slice().sort(function(a, b) {
+    return b - a;
+});
+
+console.log(arr2);
