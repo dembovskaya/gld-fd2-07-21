@@ -38,9 +38,17 @@ class Shark {
         const miniCopy = new Shark(this.color, Littlesize, littleName,  1, 3, 2);
         return miniCopy;
     }
+
+    set ration(food) {
+        this.#ration.push(food);
+    }
 }
 
 const shark = new Shark('grey', 10, 'Sharky', 2, 4, 3);
 const miniShark = new Shark('white', 7, 'LittleShark');
 
-console.log(shark.spawn())
+
+console.log(shark.eat('fishes'));
+miniShark.ration = 'plankton';
+console.log(miniShark.eat('plankton'));
+console.log(shark.spawn());
